@@ -6,7 +6,7 @@ using namespace std;
 template <typename T>
 class TreeNode {
 public:
-    explicit TreeNode(T value) : value{value} {
+    explicit TreeNode(T value) : value{value} { //, leftChild{nullptr}, rightChild{nullptr}
         this->leftChild = nullptr;
         this->rightChild = nullptr;
     }
