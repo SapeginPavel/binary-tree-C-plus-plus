@@ -20,7 +20,7 @@ int main() {
 
     root.deleteNode();
 
-
+    cout << "rigjr";
 
     return 0;
 }

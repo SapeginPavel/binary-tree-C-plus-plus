@@ -1,6 +1,8 @@
 #pragma once
 #include <iostream>
 
+using namespace std;
+
 template <typename T>
 class TreeNode {
 public:
@@ -10,6 +12,7 @@ public:
     }
 
     ~TreeNode() {
+        cout << "deletam" << endl;
         if (leftChild != nullptr) {
             delete leftChild;
         }
