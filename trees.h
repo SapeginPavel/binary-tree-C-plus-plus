@@ -4,7 +4,7 @@
 template <class T>
 class Tree {
 public:
-    explicit Tree(TreeNode<T> *root) : root(root) {}
+    explicit Tree(TreeNode<T> *root) : root{root} {}
     TreeNode<T>* getRoot();
     TreeNode<T>* setRoot(TreeNode<T>* newRoot);
 

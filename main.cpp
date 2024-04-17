@@ -7,27 +7,33 @@ using namespace std;
 //todo: работа с очищением памяти ; попробовать ifndef
 
 int main() {
-    cout << "Start!" << endl;
+    cout << "Integer tree:" << endl;
+    TreeNode<int> intRoot{5};
+    Tree integerTree{&intRoot};
 
-    TreeNode<int> root{100};
-    TreeNode<int> l1{10};
-    TreeNode<int> r1{50};
-
-    root.setLeftChild(&l1);
-    root.setRightChild(&r1);
-
-    TreeNode<int> l2{1010};
-    TreeNode<int> r2{5050};
+    intRoot.setLeftChild(new TreeNode<int>{4});
+    intRoot.getLeftChild()->setLeftChild(new TreeNode<int>{44});
+    intRoot.getLeftChild()->setRightChild(new TreeNode<int>{46});
+    intRoot.setRightChild(new TreeNode<int>{6});
+    TreePrinter<int>::printTree(&integerTree);
 
 
-    l1.setLeftChild(&l2);
-    l1.setRightChild(&r2);
+    cout << endl << endl;
 
-    Tree<int> tree {&root};
 
-    cout << tree.getRoot()->getLeftChild()->getValue() << endl;
+    cout << "String tree:" << endl;
+    TreeNode<string> stringRoot{"root"};
+    Tree stringTree{&stringRoot};
 
-    TreePrinter<int>::printTree(&tree);
-
+    stringTree.getRoot()->setLeftChild(new TreeNode<string>{"l"});
+    stringTree.getRoot()->getLeftChild()->setLeftChild(new TreeNode<string>{"ll"});
+    stringTree.getRoot()->getLeftChild()->setRightChild(new TreeNode<string>{"lr"});
+    stringTree.getRoot()->setRightChild(new TreeNode<string>{"r"});
+    TreePrinter<string>::printTree(&stringTree);
     return 0;
+}
+
+template <typename T>
+Tree<T>* fillTree(TreeNode<T>, T leftValue, T rightValue) {
+
 }
