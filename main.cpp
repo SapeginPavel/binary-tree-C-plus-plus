@@ -14,6 +14,11 @@ int main() {
     root.setLeftChild(&l1);
     root.setRightChild(&r1);
 
+    cout << "cont" << endl;
+
+    cout << root.getLeftChild()->getValue() << endl;
+
+    root.deleteNode();
 
 
 
