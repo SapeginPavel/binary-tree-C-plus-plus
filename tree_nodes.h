@@ -12,7 +12,6 @@ public:
     }
 
     ~TreeNode() {
-        cout << "deletam" << endl;
         if (leftChild != nullptr) {
             delete leftChild;
         }

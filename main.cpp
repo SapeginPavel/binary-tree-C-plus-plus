@@ -1,5 +1,6 @@
 #include <iostream>
 #include "tree_nodes.h"
+#include "trees.h"
 using namespace std;
 
 //todo: работа с очищением памяти ; создать дерево
@@ -14,13 +15,11 @@ int main() {
     root.setLeftChild(&l1);
     root.setRightChild(&r1);
 
-    cout << "cont" << endl;
+    Tree<int> tree {&root};
 
-    cout << root.getLeftChild()->getValue() << endl;
+    cout << tree.getRoot()->getLeftChild()->getValue() << endl;
 
     root.deleteNode();
-
-    cout << "rigjr";
 
     return 0;
 }

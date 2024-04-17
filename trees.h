@@ -4,8 +4,8 @@
 template <class T>
 class Tree {
 public:
-//    explicit Tree(TreeNode<T> *root) : root(root) {}
-//    TreeNode<T>* getRoot();
+    explicit Tree(TreeNode<T> *root) : root(root) {}
+    TreeNode<T>* getRoot();
 //    TreeNode<T>* setRoot(TreeNode<T>* newRoot);
 
 private:
@@ -17,8 +17,8 @@ private:
 //    return this->root = newRoot; //то, на что ссылался указатель раньше - оно не висит в памяти? Не понимаю, когда удалять, когда нет
 //}
 
-//template<class T>
-//TreeNode<T> *Tree<T>::getRoot() {
-//    return this->root;
-//}
+template<class T>
+TreeNode<T> *Tree<T>::getRoot() {
+    return this->root;
+}
 
