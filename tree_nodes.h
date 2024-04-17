@@ -32,6 +32,7 @@ void TreeNode<T>::setValue(T newValue) {
 template<typename T>
 T TreeNode<T>::getValue() const {
     return this->value;
+//    return 3; // для теста
 }
 
 template<typename T>

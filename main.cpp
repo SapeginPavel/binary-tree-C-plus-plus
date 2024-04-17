@@ -2,6 +2,7 @@
 #include "tree_nodes.h"
 #include "trees.h"
 #include "tree_printers.h"
+#include "tests.h"
 using namespace std;
 
 //todo: балл макс.
@@ -10,6 +11,12 @@ using namespace std;
 //todo: как и что нужно удалять? Если нет ответа, самому смотреть
 
 int main() {
+    Test::test();
+
+
+    cout << endl << endl;
+
+
     cout << "Integer tree:" << endl;
     TreeNode<int> intRoot{5};
     Tree integerTree{&intRoot};
@@ -35,9 +42,4 @@ int main() {
     TreePrinter<string>::printTree(&stringTree);
 
     return 0;
-}
-
-template <typename T>
-Tree<T>* fillTree(TreeNode<T>, T leftValue, T rightValue) {
-
 }
