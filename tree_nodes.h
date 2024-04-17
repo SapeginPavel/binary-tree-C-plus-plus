@@ -1,7 +1,3 @@
-#ifndef TASK_3_1_TREE_NODES_H
-#define TASK_3_1_TREE_NODES_H
-#endif //TASK_3_1_TREE_NODES_H
-
 #pragma once
 #include <iostream>
 
@@ -10,9 +6,20 @@ class TreeNode {
 public:
     explicit TreeNode(T value) : value{value} {}
 public:
-    void setLeftChild(const TreeNode& node);
+    void setLeftChild(TreeNode *node);
+    void setRightChild(TreeNode *node);
 private:
-    TreeNode* leftChild;
-    TreeNode* rightChild;
+    TreeNode<T>* leftChild;
+    TreeNode<T>* rightChild;
     T value;
 };
+
+template<typename T>
+void TreeNode<T>::setLeftChild(TreeNode *node) {
+    this->leftChild = node;
+}
+
+template<typename T>
+void TreeNode<T>::setRightChild(TreeNode *node) {
+    this->rightChild = node;
+}

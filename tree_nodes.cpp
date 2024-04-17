@@ -4,9 +4,15 @@
 
 using namespace std;
 
-template <typename T>
-void TreeNode<T>::setLeftChild(const TreeNode& node) {
+//template <typename T>
+//void TreeNode<T>::setLeftChild(TreeNode& node) {
+//    this->leftChild = node;
+//}
 
-}
 
+
+//template <typename T>
+//void TreeNode<T>::setRightChild(TreeNode& node) {
+//    this->rightChild = node;
+//}
 
