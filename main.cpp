@@ -1,9 +1,10 @@
 #include <iostream>
 #include "tree_nodes.h"
 #include "trees.h"
+#include "tree_printers.h"
 using namespace std;
 
-//todo: работа с очищением памяти ; создать дерево
+//todo: работа с очищением памяти ; попробовать ifndef
 
 int main() {
     cout << "Start!" << endl;
@@ -15,11 +16,18 @@ int main() {
     root.setLeftChild(&l1);
     root.setRightChild(&r1);
 
+    TreeNode<int> l2{1010};
+    TreeNode<int> r2{5050};
+
+
+    l1.setLeftChild(&l2);
+    l1.setRightChild(&r2);
+
     Tree<int> tree {&root};
 
     cout << tree.getRoot()->getLeftChild()->getValue() << endl;
 
-    root.deleteNode();
+    TreePrinter<int>::printTree(&tree);
 
     return 0;
 }
