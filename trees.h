@@ -7,7 +7,6 @@ public:
     explicit Tree(TreeNode<T> *root) : root{root} {}
     TreeNode<T>* getRoot();
     TreeNode<T>* setRoot(TreeNode<T>* newRoot);
-
 private:
     TreeNode<T>* root;
 };

@@ -11,21 +11,13 @@ public:
         this->rightChild = nullptr;
     }
 
-    ~TreeNode() {
-        if (leftChild != nullptr) {
-            delete leftChild;
-        }
-        if (rightChild != nullptr) {
-            delete rightChild;
-        }
-    }
 public:
     void setLeftChild(TreeNode *node);
     void setRightChild(TreeNode *node);
     TreeNode<T>* getLeftChild();
     TreeNode<T>* getRightChild();
     T getValue() const;
-    void deleteNode();
+    void setValue(T newValue);
 private:
     TreeNode<T>* leftChild;
     TreeNode<T>* rightChild;
@@ -33,9 +25,8 @@ private:
 };
 
 template<typename T>
-void TreeNode<T>::deleteNode() {
-//    this->~TreeNode();
-    delete this;
+void TreeNode<T>::setValue(T newValue) {
+    this->value = newValue;
 }
 
 template<typename T>

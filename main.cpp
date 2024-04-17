@@ -4,7 +4,10 @@
 #include "tree_printers.h"
 using namespace std;
 
+//todo: балл макс.
 //todo: работа с очищением памяти ; попробовать ifndef
+
+//todo: как и что нужно удалять? Если нет ответа, самому смотреть
 
 int main() {
     cout << "Integer tree:" << endl;
@@ -30,6 +33,7 @@ int main() {
     stringTree.getRoot()->getLeftChild()->setRightChild(new TreeNode<string>{"lr"});
     stringTree.getRoot()->setRightChild(new TreeNode<string>{"r"});
     TreePrinter<string>::printTree(&stringTree);
+
     return 0;
 }
 
