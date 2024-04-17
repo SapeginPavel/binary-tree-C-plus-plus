@@ -15,5 +15,7 @@ int main() {
     root.setRightChild(&r1);
 
 
+
+
     return 0;
 }
